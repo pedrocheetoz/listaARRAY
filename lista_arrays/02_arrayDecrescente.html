@@ -12,33 +12,11 @@
     const numero3 = Number(prompt("informe o terceiro numero"));
 
     //PROCESSAMENTO
-    let array = []
+    
+    let array = [numero1, numero2, numero3]
 
-    if (numero2 < numero1 && numero3 < numero1 && numero3 < numero2) {
-        array[0] = numero1
-        array[1] = numero2
-        array[2] = numero3
-    } else if (numero1 < numero2 && numero3 < numero2 && numero1 < numero3) {
-        array[0] = numero2
-        array[1] = numero3
-        array[2] = numero1
-    } else if (numero1 < numero3 && numero2 < numero3 && numero2 < numero1) {
-        array[0] = numero3
-        array[1] = numero1
-        array[2] = numero2
-    } else if (numero2 < numero1 && numero3 < numero1 && numero2 < numero3) {
-        array[0] = numero1
-        array[1] = numero3
-        array[2] = numero2
-    } else if (numero1 < numero2 && numero3 < numero2 && numero3 < numero1) {
-        array[0] = numero2
-        array[1] = numero1
-        array[2] = numero3
-    } else if (numero1 < numero3 && numero2 < numero3 && numero1 < numero2) {
-        array[0] = numero3
-        array[1] = numero2
-        array[2] = numero1
-    }
+  
     //SAÍDA
-    alert(array.join(" - "));
+    alert(array.sort((a, b) => b - a).join(" - "));
+
 </script>
